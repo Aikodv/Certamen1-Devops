@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  # MongoDB
+  db:
+    image: mongo:latest
+    restart: unless-stopped
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - ej3_network
+
+  app:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "9090:8080"
+      - "9093:8080"
+    environment:
+      - APP_PORT=8080
+      - MONGO_URI=mongodb://db:27017/students_db
+    depends_on:
+      - db
+    networks:
+      - ej3_network
+
+volumes:
+  mongo_data:
+
+networks:
+  ej3_network:
