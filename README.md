@@ -1,6 +1,5 @@
-# Instrucciones de Despliegue - Certamen 1
+# Certamen 1
 
-Este documento contiene los comandos exactos para construir y desplegar cada uno de los 3 ejercicios del certamen por separado.
 
 ---
 
