@@ -37,7 +37,7 @@
    ```bash
    docker run -d -p 9090:9090 --name contenedor_ej2 -v "$(pwd)/target/ej2_certamen1_2026-1.0.0.jar:/app/app.jar" -e SERVER_PORT=9090 app_ej2:1.0
    ```
-*Para probar:* Abre tu navegador en `http://localhost:9090` (verifica la ruta exacta en tu `Controller`).
+*Para probar:* Abre tu navegador en `http://localhost:9090` 
 
 ---
 
